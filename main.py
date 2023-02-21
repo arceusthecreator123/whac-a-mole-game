@@ -186,7 +186,9 @@ class GameManager:
             if self.misses == 10:
                 # Game over screen 
                 self.restart_game()
-                
+                if self.PLAY: 
+                    self.misses = 0
+                    self.score = 0
                 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
